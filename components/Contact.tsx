@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
                 </p>
                 {GOOGLE_FORM_URL ? (
                   <a
-                    href={GOOGLE_FORM_URL.replace('?embedded=true', '')}
+                    href={GOOGLE_FORM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
