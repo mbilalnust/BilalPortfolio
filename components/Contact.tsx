@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 import { GOOGLE_FORM_URL, PROFILE } from '../data';
 
 const Contact: React.FC = () => {
@@ -41,26 +41,32 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl overflow-hidden p-1 shadow-2xl">
-            <div className="bg-slate-50 w-full h-[500px] rounded-xl overflow-hidden relative">
-              {GOOGLE_FORM_URL ? (
-                <iframe
-                  src={GOOGLE_FORM_URL}
-                  width="100%"
-                  height="100%"
-                  frameBorder="0"
-                  marginHeight={0}
-                  marginWidth={0}
-                  title="Contact Form"
-                  className="absolute inset-0 w-full h-full"
-                >
-                  Loading…
-                </iframe>
-              ) : (
-                <div className="flex items-center justify-center h-full text-slate-400 p-8 text-center">
-                  <p>Please update GOOGLE_FORM_URL in data.ts to enable the contact form.</p>
+          <div className="flex items-center justify-center">
+            <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 shadow-2xl w-full max-w-md">
+              <div className="text-center space-y-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4">
+                  <Send size={32} className="text-white" />
                 </div>
-              )}
+                <h3 className="text-2xl font-bold text-white mb-2">Get in Touch</h3>
+                <p className="text-slate-300 mb-8">
+                  Have a project in mind or want to collaborate? Fill out the form and I'll get back to you soon!
+                </p>
+                {GOOGLE_FORM_URL ? (
+                  <a
+                    href={GOOGLE_FORM_URL.replace('?embedded=true', '')}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    <Send size={20} />
+                    Open Contact Form
+                  </a>
+                ) : (
+                  <div className="text-slate-400 p-4 bg-slate-700/50 rounded-lg">
+                    <p className="text-sm">Please update GOOGLE_FORM_URL in data.ts to enable the contact form.</p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

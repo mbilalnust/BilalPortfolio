@@ -200,4 +200,4 @@ export const BLOG_POSTS: BlogPost[] = [
  * 
  * If left empty (""), the contact form will show a placeholder message.
  */
-export const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfjt5GtbNyyyk-ILFDFdp0FATeAorRJyDuCPdToNafo3SZUVg/viewform?embedded=true";
+export const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfjt5GtbNyyyk-ILFDFdp0FATeAorRJyDuCPdToNafo3SZUVg/viewform";
