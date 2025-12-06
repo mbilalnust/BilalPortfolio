@@ -113,6 +113,7 @@ export async function getChatbotResponse(messages: Message[]): Promise<string> {
     
     throw new Error('Unexpected response format from API');
   } catch (error) {
+    console.error('Error in getChatbotResponse:', error);
     if (error instanceof Error) {
       // Return user-friendly error messages
       if (error.message.includes('loading') || error.message.includes('unavailable')) {
