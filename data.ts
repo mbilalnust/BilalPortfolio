@@ -180,5 +180,5 @@ export const BLOG_POSTS: BlogPost[] = [
   }
 ];
 
-// Replaced with a placeholder. Please update with your specific Google Form URL.
-export const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfD_J1t_Example_Form_Id/viewform?embedded=true";
+// Go to https://docs.google.com/forms -> Create Form -> Send -> <> (Embed HTML) -> Copy the 'src' URL only
+export const GOOGLE_FORM_URL = "";
