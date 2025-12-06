@@ -38,17 +38,20 @@ function formatPrompt(messages: Message[]): string {
   return prompt;
 }
 
+const HUGGINGFACE_API_KEY = '__HUGGINGFACE_API_KEY__';
+
 /**
  * Calls Hugging Face Inference API to get chatbot response
  */
 export async function getChatbotResponse(messages: Message[]): Promise<string> {
   try {
     const prompt = formatPrompt(messages);
-    
+
     const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${HUGGINGFACE_API_KEY}`,
       },
       body: JSON.stringify({
         inputs: prompt,
