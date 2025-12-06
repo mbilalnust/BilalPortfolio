@@ -28,19 +28,32 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export const EXPERIENCE: Experience[] = [
   {
     id: "1",
-    role: "Data Analyst (Scientist)",
-    company: "Datarize",
+    role: "Data Scientist, AI",
+    company: "Samsung C&T Corporation",
     location: "Seoul, South Korea",
-    period: "May 2024 - Present",
+    period: "Aug 2025 - Present",
     description: [
-      "Developed predictive modeling services for Customer LTV and Churn using BetaGeo and Gamma-Gamma survival analysis.",
-      "Optimized product recommendation models, reducing client complaints by 60%.",
-      "Defined and implemented iROAS (incremental ROAS) metrics to measure campaign effectiveness (+20% campaign usage).",
-      "Built a Text-to-SQL LLM service and RAG chatbot to automate client data requests."
+      "Application of Large Language Model (LLM), fine-tuning, few-shot learning, RAG (Retrieval-Augmented Generation), MCP, Agents, LangGraph on enterprise scale mixed data (structured, unstructured) in a secure way.",
+      "Financial Manager agentic AI",
+      "Understanding Engineering Drawings agentic AI"
     ]
   },
   {
     id: "2",
+    role: "Data Scientist (Analyst)",
+    company: "Datarize",
+    location: "Seoul, South Korea",
+    period: "May 2024 - Jun 2025",
+    description: [
+      "Analytics PM Role: Collaborated with teams to identify customer-driven projects, delivered analysis through reports, and integrated high-impact solutions into datarize CRM based on customer Voice of Customer (VoC).",
+      "Added and optimized SMB e-commerce site analytics features: Site Core Metrics, Funnel, Cohort, Visit-Order User Segmentation to assess website health and suggest the appropriate audience for campaigns.",
+      "Campaign Statistics were analyzed and shown on CRM using MMM marketing mix models: Calculated CVR, CTR, ROAS, and iROAS metrics for different types of campaigns (text, email, message).",
+      "Product Recommendation results and query time: Utilize association rule mining to find related products. Recommended products are then displayed to customers on the console for creating Onsite campaigns.",
+      "Engineering: ECR docker images of EMR (pyspark) and EKS (Athena SQL) jobs were scheduled run using MWAA airflow to store data into (Data lake - S3 storage layer) and MySQL."
+    ]
+  },
+  {
+    id: "3",
     role: "Data Scientist, Analytics",
     company: "Protopie, Studio XID",
     location: "Seoul, South Korea",
@@ -53,7 +66,7 @@ export const EXPERIENCE: Experience[] = [
     ]
   },
   {
-    id: "3",
+    id: "4",
     role: "Data Scientist, Analytics",
     company: "DPWorld",
     location: "Seoul, South Korea",
@@ -65,7 +78,7 @@ export const EXPERIENCE: Experience[] = [
     ]
   },
   {
-    id: "4",
+    id: "5",
     role: "Data Scientist, Analytics",
     company: "Dataviz",
     location: "Daejeon, South Korea",
@@ -77,7 +90,7 @@ export const EXPERIENCE: Experience[] = [
     ]
   },
   {
-    id: "5",
+    id: "6",
     role: "Data Scientist, Analytics",
     company: "TOPS Lab, KAIST",
     location: "Daejeon, South Korea",
@@ -88,7 +101,7 @@ export const EXPERIENCE: Experience[] = [
     ]
   },
   {
-    id: "6",
+    id: "7",
     role: "Data Analyst (Project Management)",
     company: "National Highway Authority (NHA)",
     location: "Islamabad, Pakistan",
