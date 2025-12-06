@@ -1,6 +1,6 @@
 import React from 'react';
 import { Briefcase, MapPin, GraduationCap, Award } from 'lucide-react';
-import { EXPERIENCE, PROFILE, EDUCATION } from '../data';
+import { EXPERIENCE, PROFILE, EDUCATION } from '../data.ts';
 
 const Experience: React.FC = () => {
   return (

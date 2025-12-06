@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail, MapPin } from 'lucide-react';
-import { GOOGLE_FORM_URL, PROFILE } from '../data';
+import { GOOGLE_FORM_URL, PROFILE } from '../data.ts';
 
 const Contact: React.FC = () => {
   return (

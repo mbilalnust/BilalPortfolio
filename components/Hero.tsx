@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, Github, Linkedin, Mail, Twitter, ExternalLink, BarChart } from 'lucide-react';
-import { PROFILE, SOCIAL_LINKS } from '../data';
+import { PROFILE, SOCIAL_LINKS } from '../data.ts';
 
 const Hero: React.FC = () => {
   const getIcon = (iconName: string) => {

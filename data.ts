@@ -1,4 +1,4 @@
-import { Profile, Experience, Project, BlogPost, SocialLink, Education } from './types';
+import { Profile, Experience, Project, BlogPost, SocialLink, Education } from './types.ts';
 
 export const PROFILE: Profile = {
   name: "Bilal Muhammad",

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, Clock, Calendar } from 'lucide-react';
-import { BLOG_POSTS } from '../data';
+import { BLOG_POSTS } from '../data.ts';
 
 const Blog: React.FC = () => {
   return (

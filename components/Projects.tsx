@@ -1,6 +1,6 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
-import { PROJECTS } from '../data';
+import { PROJECTS } from '../data.ts';
 
 const Projects: React.FC = () => {
   return (

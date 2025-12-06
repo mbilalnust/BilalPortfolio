@@ -1,5 +1,5 @@
 import React from 'react';
-import { PROFILE } from '../data';
+import { PROFILE } from '../data.ts';
 
 const Footer: React.FC = () => {
   return (
