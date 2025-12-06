@@ -189,15 +189,14 @@ export const BLOG_POSTS: BlogPost[] = [
  * 2. Create a new form with your desired fields (name, email, message, etc.)
  * 3. Customize your form's theme and settings as needed
  * 4. Click the "Send" button (top right corner)
- * 5. Click the "</>" (Embed HTML) icon/tab in the send dialog
- * 6. You'll see an iframe code that looks like:
- *    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd.../viewform?embedded=true" ...></iframe>
- * 7. Copy ONLY the URL from the 'src' attribute (the part between the quotes)
- *    Example: "https://docs.google.com/forms/d/e/1FAIpQLSd.../viewform?embedded=true"
- * 8. Paste that URL below between the quotes
+ * 5. Click the chain link icon (or "Get link" tab)
+ * 6. Copy the form URL - it should look like:
+ *    "https://docs.google.com/forms/d/e/1FAIpQLSd.../viewform"
+ * 7. Paste that URL below between the quotes
  * 
- * Important: Make sure to copy the full URL including "?embedded=true" at the end
+ * Important: Use the regular form URL (NOT the embed URL). Do NOT include "?embedded=true"
+ * Since the form opens in a new tab, we don't need the embedded version.
  * 
  * If left empty (""), the contact form will show a placeholder message.
  */
-export const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfjt5GtbNyyyk-ILFDFdp0FATeAorRJyDuCPdToNafo3SZUVg/viewform?embedded=true";
+export const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfjt5GtbNyyyk-ILFDFdp0FATeAorRJyDuCPdToNafo3SZUVg/viewform";
