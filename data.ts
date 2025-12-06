@@ -213,3 +213,73 @@ export const BLOG_POSTS: BlogPost[] = [
  * If left empty (""), the contact form will show a placeholder message.
  */
 export const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfjt5GtbNyyyk-ILFDFdp0FATeAorRJyDuCPdToNafo3SZUVg/viewform";
+
+/**
+ * Formats all portfolio data into a readable context string for the chatbot
+ */
+export function getPortfolioContext(): string {
+  let context = `PORTFOLIO INFORMATION FOR BILAL MUHAMMAD:\n\n`;
+  
+  // Profile Information
+  context += `PROFILE:\n`;
+  context += `Name: ${PROFILE.name}\n`;
+  context += `Title: ${PROFILE.title}\n`;
+  context += `Tagline: ${PROFILE.tagline}\n`;
+  context += `About: ${PROFILE.about}\n`;
+  context += `Location: ${PROFILE.location}\n`;
+  context += `Email: ${PROFILE.email}\n`;
+  context += `Skills: ${PROFILE.skills.join(', ')}\n\n`;
+  
+  // Social Links
+  context += `SOCIAL LINKS:\n`;
+  SOCIAL_LINKS.forEach(link => {
+    context += `${link.platform}: ${link.url}\n`;
+  });
+  context += `\n`;
+  
+  // Experience
+  context += `WORK EXPERIENCE:\n`;
+  EXPERIENCE.forEach(exp => {
+    context += `${exp.role} at ${exp.company} (${exp.location})\n`;
+    context += `Period: ${exp.period}\n`;
+    context += `Responsibilities:\n`;
+    exp.description.forEach(desc => {
+      context += `- ${desc}\n`;
+    });
+    context += `\n`;
+  });
+  
+  // Education
+  context += `EDUCATION:\n`;
+  EDUCATION.forEach(edu => {
+    context += `${edu.degree} from ${edu.school}\n`;
+    context += `Period: ${edu.period}\n`;
+    if (edu.description) {
+      context += `${edu.description}\n`;
+    }
+    context += `\n`;
+  });
+  
+  // Projects
+  context += `PROJECTS:\n`;
+  PROJECTS.forEach(project => {
+    context += `${project.title}\n`;
+    context += `Description: ${project.description}\n`;
+    context += `Technologies: ${project.technologies.join(', ')}\n`;
+    if (project.githubUrl) {
+      context += `GitHub: ${project.githubUrl}\n`;
+    }
+    context += `\n`;
+  });
+  
+  // Blog Posts
+  context += `PUBLICATIONS/RESEARCH:\n`;
+  BLOG_POSTS.forEach(post => {
+    context += `${post.title}\n`;
+    context += `${post.excerpt}\n`;
+    context += `URL: ${post.url}\n`;
+    context += `\n`;
+  });
+  
+  return context;
+}
