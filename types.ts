@@ -38,7 +38,7 @@ export interface BlogPost {
 export interface SocialLink {
   platform: string;
   url: string;
-  icon: 'github' | 'linkedin' | 'twitter' | 'mail' | 'external';
+  icon: 'github' | 'linkedin' | 'twitter' | 'mail' | 'external' | 'tableau';
 }
 
 export interface Profile {

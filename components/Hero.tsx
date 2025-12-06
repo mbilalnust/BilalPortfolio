@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Github, Linkedin, Mail, Twitter, ExternalLink } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, Twitter, ExternalLink, BarChart } from 'lucide-react';
 import { PROFILE, SOCIAL_LINKS } from '../data';
 
 const Hero: React.FC = () => {
@@ -9,6 +9,7 @@ const Hero: React.FC = () => {
       case 'linkedin': return <Linkedin size={24} />;
       case 'twitter': return <Twitter size={24} />;
       case 'mail': return <Mail size={24} />;
+      case 'tableau': return <BarChart size={24} />;
       case 'external': return <ExternalLink size={24} />;
       default: return <ExternalLink size={24} />;
     }

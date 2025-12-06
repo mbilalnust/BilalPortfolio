@@ -20,6 +20,7 @@ export const PROFILE: Profile = {
 export const SOCIAL_LINKS: SocialLink[] = [
   { platform: "GitHub", url: "https://github.com/mbilalnust", icon: "github" },
   { platform: "LinkedIn", url: "https://linkedin.com/in/m-bilal", icon: "linkedin" },
+  { platform: "Tableau Public", url: "https://public.tableau.com/profile/bilal6377#!/", icon: "tableau" },
   { platform: "Portfolio", url: "https://gamma.app/docs/Welcome-Im-Bilal-and-this-is-portfolio-of-my-relevant-projects--cuiqf83bb8h8eoh", icon: "external" },
   { platform: "Email", url: "mailto:mbilalnust@gmail.com", icon: "mail" },
 ];
