@@ -1,4 +1,3 @@
-import { InferenceClient } from "@huggingface/inference";
 import { getPortfolioContext } from '../data';
 
 export interface Message {
@@ -7,39 +6,40 @@ export interface Message {
 }
 
 const PORTFOLIO_CONTEXT = getPortfolioContext();
-const SYSTEM_PROMPT = `You are a helpful assistant answering questions about Bilal Muhammad, a Data Scientist. 
-Here is his portfolio information:
+const API_URL = import.meta.env.VITE_CHAT_API_URL || 'http://localhost:8000/chat';
 
-${PORTFOLIO_CONTEXT}
-
-Answer questions based only on this information. Be concise and friendly. If asked about something not in the portfolio, politely say you don't have that information. Keep responses to 2-3 sentences when possible.`;
-
-const HUGGINGFACE_API_KEY = process.env.HUGGINGFACE_API_KEY;
+// Fallback message if API fails
+export function getFallbackResponse(userMessage: string): string {
+  const base = "I couldn't reach the assistant API right now.";
+  if (userMessage.toLowerCase().includes("experience")) {
+    return `${base} Quick summary: Bilal Muhammad is a Data Scientist with 7+ years across e-commerce, mobility, and public sector, strong in predictive modeling and analytics.`;
+  }
+  return `${base} Please try again in a moment.`;
+}
 
 /**
- * Calls Hugging Face Inference API using the official SDK
+ * Calls your FastAPI backend instead of Hugging Face directly.
+ * Sends only the latest user message; backend handles context/instructions.
  */
 export async function getChatbotResponse(messages: Message[]): Promise<string> {
-  try {
-    const client = new InferenceClient(HUGGINGFACE_API_KEY);
-    const chatCompletion = await client.chatCompletion({
-      model: "mistralai/Mistral-7B-Instruct-v0.2:featherless-ai",
-      messages: messages.map(msg => ({
-        role: msg.role,
-        content: msg.content
-      })),
-    });
-
-    if (chatCompletion.choices && chatCompletion.choices.length > 0) {
-      return chatCompletion.choices[0].message.content;
-    }
-
-    return 'I apologize, but I couldn\'t generate a response. Please try again.';
-  } catch (error) {
-    console.error('Error in getChatbotResponse:', error);
-    if (error instanceof Error) {
-      return `Sorry, I encountered an error: ${error.message}. Please try again.`;
-    }
-    return 'An unexpected error occurred. Please try again.';
+  const lastUser = [...messages].reverse().find(m => m.role === 'user');
+  const content = lastUser?.content?.trim();
+  if (!content) {
+    return "Please ask a question.";
   }
+
+  const resp = await fetch(API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ message: content }),
+  });
+
+  if (!resp.ok) {
+    throw new Error(`API returned ${resp.status}`);
+  }
+
+  const data = await resp.json();
+  return data.reply || 'I apologize, but I could not generate a response.';
 }

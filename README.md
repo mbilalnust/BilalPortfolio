@@ -71,7 +71,18 @@ Edit `data.ts` to update:
 
 See the detailed instructions in `data.ts` comments for more details.
 
-### 6. Run Locally
+### 6. Connect to your chatbot backend (for live Q&A)
+
+The chat widget now calls a backend API. Set the URL via Vite env:
+1. Create `.env.local` in the project root.
+2. Add:  
+   `VITE_CHAT_API_URL=https://<your-backend-domain-or-tunnel>/chat`
+
+If you’re running the FastAPI backend on your laptop, start it and expose it (e.g., with `ngrok http 8000`), then paste that HTTPS URL here.
+
+For GitHub Pages deployment, add a repo secret `CHAT_API_URL` with your public backend URL and the workflow will inject it at build time.
+
+### 7. Run Locally
 
 ```bash
 npm run dev
@@ -79,7 +90,7 @@ npm run dev
 
 Visit `http://localhost:5173` to see your portfolio.
 
-### 7. Preview Production Build
+### 8. Preview Production Build
 
 ```bash
 npm run build
