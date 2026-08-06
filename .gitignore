@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Secrets. This repo has a PUBLIC remote, and both .env and test_chat.py
+# hold a live HF token. Neither has ever been committed — keep it that way.
+.env
+.env.*
+!.env.example
+test_chat.py
+
+# Local python venv (test_chat.py)
+venv
+.venv
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
