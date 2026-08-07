@@ -155,8 +155,12 @@ export const WORK_ITEMS: WorkItem[] = [
     title: "Customer segmentation with K-Means + LLM embeddings",
     where: "Protopie",
     description: "Broad campaigns sent identical messaging to every prospect, and B2B buyers in different industries converted poorly. Built an unsupervised clustering pipeline over interaction behaviour, company size and usage — then enriched profiles with LLM embeddings of free-text intent.",
-    result: "**75% more signups YoY** · 123% more corporate registrations · free-to-paid down from 6 months to 3.5",
-    githubUrl: "https://github.com/mbilalnust/Customer-Segmentation-Advanced"
+    result: "**75% more signups YoY** · 123% more corporate registrations · free-to-paid down from 6 months to 3.5"
+    // No githubUrl. The Protopie work itself is unpublishable, and the repo that
+    // used to be linked here (Customer-Segmentation-Advanced) started as
+    // damiangilgonzalez1995's KMeans notebook — 4 of its 12 commits are his. The
+    // LLM-embedding half is Bilal's, but the link read as "here is my code for
+    // this", which overclaims. See cv/projects.md, "borrowed, not yet reworked".
   },
   {
     id: "2",
@@ -287,11 +291,21 @@ export const EDUCATION: Education[] = [
 ];
 
 /**
- * Open source. Every entry verified PUBLIC against cv/repos.md, and verified
- * to be Bilal's own work — not a fork of someone else's project. Graphify and
- * rag-enterprise-local were removed on 2026-08-05: both are forks with zero
- * commits by mbilalnust, so listing them here claimed authorship of upstream
- * work (Graphify-Labs/graphify and I3K-IT/RAG-Enterprise).
+ * Open source. Every entry checked against cv/projects.md, which is generated
+ * from the GitHub API and the local clones: PUBLIC, and every commit Bilal's.
+ *
+ * Two rounds of removals, both for the same reason — claiming someone else's
+ * work — caught by two different checks:
+ *
+ *  - 2026-08-05: Graphify and rag-enterprise-local. Forks with zero commits of
+ *    Bilal's (upstream Graphify-Labs/graphify, I3K-IT/RAG-Enterprise).
+ *  - 2026-08-07: Customer-Segmentation-Advanced. NOT a fork per the API, so the
+ *    first check cleared it — but it began as damiangilgonzalez1995's KMeans
+ *    notebook. A repo created by uploading files carries no parent, so nothing
+ *    in the API flags it; only the commit-author list does. It comes back once
+ *    it's genuinely reworked, with the upstream credited in its README.
+ *
+ * The rule that survives both: `isFork: false` is not evidence of authorship.
  */
 export const PROJECTS: Project[] = [
   {
