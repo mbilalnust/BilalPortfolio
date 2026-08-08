@@ -251,11 +251,18 @@ export const WORK_ITEMS: WorkItem[] = [
 /**
  * Peer-reviewed papers. Source of truth is cv/profile.yml `publications:`.
  *
- * Each venue line ends with the affiliation printed on the paper itself, which
- * is deliberate: the three were written under three different hats (KAIST,
- * Datawiz, DP World), so they independently corroborate the employment timeline
- * on dates no resume can move. Grouping them all as "KAIST research" — the easy
- * assumption, since two are transport papers — throws that away.
+ * Each venue line ends with the org whose work the paper was — not always the
+ * affiliation the journal printed. The flood paper printed "DP World" because
+ * the CEO published it after Bilal had moved, but the research was his Datawiz
+ * work, so it is credited to Datawiz here (his call, 2026-08-08).
+ *
+ * The contribution note on the two Korean papers is deliberate: he is listed as
+ * co-author on both, which is what a verifier sees, but the analysis was his and
+ * the writing was the co-authors'. Saying what he did is both honest and
+ * stronger than the byline for a data role.
+ *
+ * Citation counts are live from Google Scholar (2026-08-08), NOT from
+ * scholar_profile.pdf, which is a year stale and understates two of the three.
  */
 export const PUBLICATIONS: Publication[] = [
   {
@@ -266,13 +273,13 @@ export const PUBLICATIONS: Publication[] = [
   {
     id: "2",
     title: "Analysis of Dangerous Driving Behavior by Bus Type Using Digital Tacho Graph in Sejong City",
-    venue: "Journal of Korean Society of Transportation (2020) · Vol. 38(6), pp. 462–472 · KCI · Co-author · Datawiz",
+    venue: "Journal of Korean Society of Transportation (2020) · Vol. 38(6), pp. 462–472 · KCI · Datawiz — all DTG analysis mine, ~20M records/file",
     url: "https://www.researchgate.net/publication/348387184_Analysis_of_Dangerous_Driving_Behavior_by_Bus_Type_Using_Digital_Tacho_Graph_in_Sejong_City"
   },
   {
     id: "3",
     title: "Identifying and Clustering the Flood Impacted Areas for Strategic Information Provision",
-    venue: "Journal of the Korea Institute of Intelligent Transport Systems (2021) · Vol. 20(6) · KCI · Co-author · DP World",
+    venue: "Journal of the Korea Institute of Intelligent Transport Systems (2021) · Vol. 20(6) · KCI · Datawiz — DBSCAN clustering and write-up mine",
     url: "https://www.researchgate.net/publication/357578064_jeonlyagjeog_jeongbojegong-eul_wihan_chimsuyeonghyang-guyeog_keulleoseuteoling_Identifying_and_Clustering_the_Flood_Impacted_Areas_for_Strategic_Information_Provision_bag_eun_mibillal_muhamedeu_yo_yag"
   }
 ];
