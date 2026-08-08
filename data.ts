@@ -256,10 +256,12 @@ export const WORK_ITEMS: WorkItem[] = [
  * the CEO published it after Bilal had moved, but the research was his Datawiz
  * work, so it is credited to Datawiz here (his call, 2026-08-08).
  *
- * The contribution note on the two Korean papers is deliberate: he is listed as
- * co-author on both, which is what a verifier sees, but the analysis was his and
- * the writing was the co-authors'. Saying what he did is both honest and
- * stronger than the byline for a data role.
+ * The contribution note on the two Datawiz papers is deliberate: he is listed as
+ * co-author on both, which is what a verifier sees, but he did more than the
+ * byline suggests — and the two are not the same case. On the DTG paper (Korean)
+ * the analysis was his and the co-authors drafted it; on the flood paper
+ * (English) he wrote the manuscript as well. Saying what he did is both honest
+ * and stronger than the byline for a data role.
  *
  * Citation counts are live from Google Scholar (2026-08-08), NOT from
  * scholar_profile.pdf, which is a year stale and understates two of the three.
@@ -279,7 +281,7 @@ export const PUBLICATIONS: Publication[] = [
   {
     id: "3",
     title: "Identifying and Clustering the Flood Impacted Areas for Strategic Information Provision",
-    venue: "Journal of the Korea Institute of Intelligent Transport Systems (2021) · Vol. 20(6) · KCI · Datawiz — DBSCAN clustering and write-up mine",
+    venue: "Journal of the Korea Institute of Intelligent Transport Systems (2021) · Vol. 20(6) · KCI · Datawiz — DBSCAN clustering and the English manuscript mine",
     url: "https://www.researchgate.net/publication/357578064_jeonlyagjeog_jeongbojegong-eul_wihan_chimsuyeonghyang-guyeog_keulleoseuteoling_Identifying_and_Clustering_the_Flood_Impacted_Areas_for_Strategic_Information_Provision_bag_eun_mibillal_muhamedeu_yo_yag"
   }
 ];
