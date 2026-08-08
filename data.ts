@@ -33,7 +33,11 @@ export const SOCIAL_LINKS: SocialLink[] = [
   { platform: "GitHub", url: "https://github.com/mbilalnust", icon: "github" },
   { platform: "LinkedIn", url: "https://linkedin.com/in/m-bilal", icon: "linkedin" },
   { platform: "Tableau Public", url: "https://public.tableau.com/profile/bilal6377#!/", icon: "tableau" },
-  { platform: "Portfolio", url: "https://gamma.app/docs/Welcome-Im-Bilal-and-this-is-portfolio-of-my-relevant-projects--cuiqf83bb8h8eoh", icon: "external" },
+  // The Gamma deck link was retired 2026-08-08. It was superseded by the
+  // Reveal.js deck in the archive (cv/portfolio/deck/), and pointing visitors
+  // at the older, thinner version of the same story worked against this site.
+  // No replacement link yet: the new deck is not hosted publicly. When it is,
+  // add it back here as "Portfolio".
   { platform: "Email", url: "mailto:mbilalnust@gmail.com", icon: "mail" },
 ];
 
