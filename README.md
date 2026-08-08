@@ -1,6 +1,15 @@
-# Portfolio Website Template
+# BilalPortfolio
 
-A modern, responsive portfolio website template built with React, TypeScript, Vite, and Tailwind CSS. Perfect for showcasing your professional profile, experience, projects, and blog posts.
+Bilal Muhammad's portfolio site — React, TypeScript, Vite and Tailwind CSS, deployed
+to GitHub Pages at <https://mbilalnust.github.io/BilalPortfolio>.
+
+All content lives in `data.ts`. The instructions below are the original template's
+setup guide, kept because they still describe how the repo works.
+
+> **Note on secrets:** never commit a `.env`, and never put an API key in
+> `data.ts` or any component — this repo is public and Vite inlines everything it
+> builds into the client bundle. The chat backend URL is injected at build time
+> from the `CHAT_API_URL` repository secret; see step 6.
 
 ## Features
 
