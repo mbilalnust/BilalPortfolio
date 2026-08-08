@@ -5,9 +5,13 @@ import {
 
 export const PROFILE: Profile = {
   name: "Bilal Muhammad",
-  title: "Data Scientist",
+  title: "Data Scientist / AI Engineer",
   tagline: "Seven years turning messy data into decisions — enterprise LLM agents, predictive modelling, and the pipelines underneath — across e-commerce, logistics, mobility and the public sector.",
-  about: "I am a Data Scientist with diverse experience across e-commerce, business corporate, B2C growth, mobility, and public sector domains. I have a proven track record in predictive modeling (Churn, LTV), marketing analytics (iROAS), forecasting, and anomaly detection. I specialize in building scalable data pipelines and deploying ML models that drive business value.",
+  // The storyline, per cv/profile.yml `storyline:` — analysis, ML, engineering,
+  // AI, learned in that order. Coverage of the whole stack is the claim, and the
+  // pairing with the stakeholder-facing half is the differentiator. Everything
+  // is approached from a data perspective; this is deliberately not SWE framing.
+  about: "I have spent seven years working outward across the data stack — analytics first, then machine learning, then the data engineering underneath, and now production AI agents. I have run classical ETL where correctness means the numbers reconcile, and AI pipelines where the output is scored against a golden dataset instead. What ties it together is where I start: talking to the people with the problem, agreeing the metric that decides whether it worked, then building the thing and owning the result. I look at every problem from a data perspective.",
   avatarUrl: "https://github.com/mbilalnust.png", // Using your GitHub avatar
   location: "Seoul, South Korea",
   email: "mbilalnust@gmail.com",
