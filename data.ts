@@ -248,23 +248,31 @@ export const WORK_ITEMS: WorkItem[] = [
   }
 ];
 
-/** Peer-reviewed papers, from scholar_profile in the archive. */
+/**
+ * Peer-reviewed papers. Source of truth is cv/profile.yml `publications:`.
+ *
+ * Each venue line ends with the affiliation printed on the paper itself, which
+ * is deliberate: the three were written under three different hats (KAIST,
+ * Datawiz, DP World), so they independently corroborate the employment timeline
+ * on dates no resume can move. Grouping them all as "KAIST research" — the easy
+ * assumption, since two are transport papers — throws that away.
+ */
 export const PUBLICATIONS: Publication[] = [
   {
     id: "1",
     title: "Traveler's interactive decision-making behavior between itinerary and mode choice using Copula-based discrete-count joint modeling",
-    venue: "Transportation (2023) · SCI(E), Scopus · Impact factor 4.3 · First author, with S. Son and K. Jang"
+    venue: "Transportation (2023) · SCI(E), Scopus · Impact factor 4.3 · First author, with S. Son and K. Jang · KAIST"
   },
   {
     id: "2",
     title: "Analysis of Dangerous Driving Behavior by Bus Type Using Digital Tacho Graph in Sejong City",
-    venue: "Journal of Korean Society of Transportation (2020) · Vol. 38(6), pp. 462–472 · KCI · Co-author",
+    venue: "Journal of Korean Society of Transportation (2020) · Vol. 38(6), pp. 462–472 · KCI · Co-author · Datawiz",
     url: "https://www.researchgate.net/publication/348387184_Analysis_of_Dangerous_Driving_Behavior_by_Bus_Type_Using_Digital_Tacho_Graph_in_Sejong_City"
   },
   {
     id: "3",
     title: "Identifying and Clustering the Flood Impacted Areas for Strategic Information Provision",
-    venue: "Journal of the Korea Institute of Intelligent Transport Systems (2021) · Vol. 20(6) · Co-author",
+    venue: "Journal of the Korea Institute of Intelligent Transport Systems (2021) · Vol. 20(6) · KCI · Co-author · DP World",
     url: "https://www.researchgate.net/publication/357578064_jeonlyagjeog_jeongbojegong-eul_wihan_chimsuyeonghyang-guyeog_keulleoseuteoling_Identifying_and_Clustering_the_Flood_Impacted_Areas_for_Strategic_Information_Provision_bag_eun_mibillal_muhamedeu_yo_yag"
   }
 ];
