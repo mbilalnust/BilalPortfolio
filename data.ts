@@ -136,15 +136,17 @@ export const EXPERIENCE: Experience[] = [
   },
   {
     id: "7",
-    role: "Data Analyst (Project Management)",
+    role: "Project Analyst, Project Management Unit",
     company: "National Highway Authority",
     location: "Islamabad, Pakistan",
     period: "Aug 2016 - Aug 2017",
     description: [
-      "Managed 5 highway infrastructure projects, defining KPIs and automating operational and financial dashboards in Power BI — **60% less manual field reporting**.",
-      "Built the C-level dashboard tracking budget allocated versus spent, timeline, planned versus actual progress, with real-time report upload driving the progress calculation."
+      "Tracked progress and spend on 5 highway projects built by Chinese–Pakistani contractor joint ventures under Korean consulting engineers, in the Project Management Unit standing between contractors, consultants and NHA leadership.",
+      "Defined the KPI set the programme was steered on — planned versus actual physical progress, schedule and cost variance against baseline, budget utilisation, burn rate, forecast completion — normalised so five contractors could be compared on the same terms.",
+      "Replaced the manual Excel reporting cycle with a load into a relational database feeding Tableau — **60% less manual reporting effort**, and the weekly progress meeting was chaired on the dashboard.",
+      "Cross-checked claimed progress against site visits before it reached leadership, so decisions rested on verified quantities rather than contractor self-reporting."
     ],
-    tech: ["Power BI", "SQL", "Python", "R"]
+    tech: ["Tableau", "SQL", "Python", "Excel"]
   }
 ];
 
