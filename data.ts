@@ -49,7 +49,7 @@ export const EXPERIENCE: Experience[] = [
     location: "Seoul, South Korea",
     period: "Aug 2025 - Present",
     description: [
-      "Built enterprise AI agents (HR, Financial, Contract, ITB) end to end — requirements with HR, finance, legal and procurement stakeholders through AWS deployment, RAG evaluation and MAU/VoC monitoring.",
+      "Built enterprise AI agents (Financial, Contract, ITB, Engineering Drawings) end to end — requirements with finance, legal and procurement stakeholders through AWS deployment, RAG evaluation and MAU/VoC monitoring.",
       "Built a multi-agent finance report system on LangGraph with advanced RAG — custom chunking and Graph RAG over Amazon Neptune — synthesising market and competitor data for C-level decisions.",
       "Shipped a concrete-evaluation agent that turns unstructured field reports into structured records and scores them against rules, **cutting evaluation from one week to one hour**.",
       "Deployed a golden-dataset pipeline and dashboard (manual entry, LLM generation, page-level annotation) on a customised deepEval library, so every agent has measurable quality.",
