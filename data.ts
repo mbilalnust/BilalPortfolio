@@ -6,12 +6,12 @@ import {
 export const PROFILE: Profile = {
   name: "Bilal Muhammad",
   title: "Data Scientist / AI Engineer",
-  tagline: "Seven years turning messy data into decisions — enterprise LLM agents, predictive modelling, and the pipelines underneath — across e-commerce, logistics, mobility and the public sector.",
+  tagline: "Seven years across the full data stack — enterprise LLM agents, predictive modelling, and the data pipelines supporting them — in e-commerce, logistics, mobility and the public sector.",
   // The storyline, per cv/profile.yml `storyline:` — analysis, ML, engineering,
   // AI, learned in that order. Coverage of the whole stack is the claim, and the
   // pairing with the stakeholder-facing half is the differentiator. Everything
   // is approached from a data perspective; this is deliberately not SWE framing.
-  about: "I have spent seven years working outward across the data stack — analytics first, then machine learning, then the data engineering underneath, and now production AI agents. I have run classical ETL where correctness means the numbers reconcile, and AI pipelines where the output is scored against a golden dataset instead. What ties it together is where I start: talking to the people with the problem, agreeing the metric that decides whether it worked, then building the thing and owning the result. I look at every problem from a data perspective.",
+  about: "I have seven years of experience covering the full data stack: analytics, then machine learning, then the data engineering supporting both, and currently production AI agents. This includes classical ETL, where correctness means the numbers reconcile, and AI pipelines, where output is evaluated against a golden dataset instead. I work directly with the stakeholders who own the problem to agree the scope and define the metric that determines success, then deliver and take responsibility for the result. Every problem is approached from a data perspective.",
   avatarUrl: "https://github.com/mbilalnust.png", // Using your GitHub avatar
   location: "Seoul, South Korea",
   email: "mbilalnust@gmail.com",
