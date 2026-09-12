@@ -76,13 +76,14 @@ export const EXPERIENCE: Experience[] = [
     location: "Seoul, South Korea",
     period: "May 2024 - Jun 2025",
     description: [
-      "Built LTV and churn prediction models (BG/NBD, Gamma-Gamma) with sales AMs to sharpen retention targeting — **30% churn reduction**, and ~12% better conversion than the old rule-based segments.",
-      "Owned the end-to-end pipeline, CRM data-mart design and dashboard serving **600+ B2B e-commerce clients** — CVR, CTR, ROAS, iROAS, funnel, cohort and channel performance — with backend developers and data engineers.",
-      "Defined and shipped **iROAS (incremental ROAS)**, comparing exposed against non-exposed user groups, scoped with C-level and sales. Client campaign usage rose 20%.",
-      "Caught a tracking bug where orders exceeded checkout events across hundreds of client sites, fixed the logging, and turned the fix into a platform-wide onboarding QA standard.",
-      "Rewrote campaign attribution to enforce strict last-click within a 48-hour window, restoring trustworthy ROAS, CAC and LTV."
+      "Replaced rule-based retention targeting with BG/NBD and Gamma-Gamma models; partnered with sales account managers to apply customer scores, contributing to a 30% reduction in churn.",
+      "Modernized the recommendation workflow through modularization and replacement of manual R execution steps with Python automated through GitHub Actions, reducing client complaints by 60%.",
+      "Developed and maintained Python, SQL and PySpark pipelines serving 600+ B2B ecommerce clients, supporting CRM analytics, funnels, cohorts and campaign reporting through AWS S3, Athena, EMR/EKS and MWAA.",
+      "Refactored session processing and acquisition-attribution models, updating SQL transformations and Airflow dependencies to produce channel-level session, engagement, order and revenue metrics.",
+      "Diagnosed tracking inconsistencies where recorded orders exceeded checkout events, corrected logging issues across client websites and incorporated the checks into a standard onboarding QA process.",
+      "Defined and implemented an iROAS dashboard feature comparing campaign-exposed and non-exposed customer groups; collaborated with leadership and sales, contributing to a 20% increase in client campaign utilization."
     ],
-    tech: ["Python", "PySpark", "R", "SQL", "Athena", "EMR / EKS", "MWAA Airflow", "Superset"]
+    tech: ["Python","SQL","PySpark","R","AWS S3","Athena","EMR","EKS","MWAA/Airflow","Superset","GitHub Actions"]
   },
   {
     id: "3",
@@ -184,16 +185,23 @@ export const WORK_ITEMS: WorkItem[] = [
     id: "3",
     title: "Incremental ROAS as a self-serve CRM feature",
     where: "Datarize",
-    description: "Standard ROAS can't tell you what a campaign added versus doing nothing. Designed a test/control split with strict attribution, computed iROAS daily through Python and Airflow ETL into Silver and Gold marts, then shipped it to clients as a Lab Report rather than a slide.",
-    result: "**20% more client campaign usage** — clients could finally see incremental revenue"
+    description: "Defined and implemented an iROAS dashboard feature comparing campaign-exposed and non-exposed customer groups; collaborated with leadership and sales, contributing to a 20% increase in client campaign utilization.",
+    result: "**20% increase in client campaign utilization**"
   },
   {
     id: "4",
     title: "LTV and churn probability modelling",
     where: "Datarize",
     description: "Segmentation ran on rules like \"inactive 7 days = churned\", which mis-targeted campaigns. Engineered RFM features, trained BG/NBD and Gamma-Gamma models, and automated daily scoring so clients could build audiences like \"high-LTV at-risk\".",
-    result: "**30% churn reduction** · ~12% better conversion than rule-based",
+    result: "**30% reduction in churn**",
     githubUrl: "https://github.com/mbilalnust/B2C-Customer-Churn-Prediction"
+  },
+  {
+    id: "13",
+    title: "Product recommendation workflow modernization",
+    where: "Datarize",
+    description: "Modernized the recommendation workflow through modularization and replacement of manual R execution steps with Python automated through GitHub Actions, reducing client complaints by 60%.",
+    result: "**60% reduction in client complaints**"
   },
   {
     id: "5",
@@ -218,10 +226,10 @@ export const WORK_ITEMS: WorkItem[] = [
   },
   {
     id: "8",
-    title: "Attribution data-quality governance",
+    title: "Session processing and acquisition attribution",
     where: "Datarize",
-    description: "The CRM sometimes credited one order to several campaigns, breaking last-click attribution and making ROAS, CAC and LTV unreliable. Rewrote the attribution logic to enforce strict last-click within a 48-hour exposure window.",
-    result: "Pre-merge QA checklist on every ETL PR — adopted by the whole analytics team"
+    description: "Refactored session processing and acquisition-attribution models, updating SQL transformations and Airflow dependencies to produce channel-level session, engagement, order and revenue metrics.",
+    result: "Channel-level session, engagement, order and revenue metrics"
   },
   {
     id: "9",
