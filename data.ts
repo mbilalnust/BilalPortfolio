@@ -238,14 +238,6 @@ export const WORK_ITEMS: WorkItem[] = [
     result: "Complaints validated · Routes 222, 601, 1000 flagged for targeted driver education"
   },
   {
-    id: "11",
-    title: "Bronze → Silver → Gold analytics stack",
-    where: "Side project",
-    description: "An early-stage team needed an analytics stack scalable enough for growth but lean enough for one engineer. Layered medallion architecture: S3 storage, DuckDB or Athena/Spark as engine, Glue for table management, Postgres for the serving mart, MWAA for orchestration, Docker images built on PR merge.",
-    result: "Clear lineage, production-ready, affordable to run solo",
-    githubUrl: "https://github.com/mbilalnust/ETL-poor-man-pipeline"
-  },
-  {
     id: "12",
     title: "Local PDF RAG on open-source LLMs",
     where: "Side project",
